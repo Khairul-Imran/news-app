@@ -7,21 +7,28 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.news_app_backend.Config.NewsApiConfig;
-import com.example.news_app_backend.Utils.NewsDataParser;
+import com.example.news_app_backend.Utils.NewsResponseParser;
 
 @Service
 public class NewsService {
     
     private final RestTemplate restTemplate;
     private final NewsApiConfig config;
-    private final NewsDataParser newsDataParser;
+    private final NewsResponseParser newsDataParser;
     private final Logger logger = LoggerFactory.getLogger(NewsService.class);
 
     @Autowired
-    public NewsService(RestTemplate restTemplate, NewsApiConfig config, NewsDataParser weatherDataParser) {
+    public NewsService(RestTemplate restTemplate, NewsApiConfig config, NewsResponseParser newsDataParser) {
         this.restTemplate = restTemplate;
         this.config = config;
-        this.newsDataParser = weatherDataParser;
+        this.newsDataParser = newsDataParser;
     }
+
+    // getNewsForTopHeadlines
+
+    // getNewsForEverything
+
+    // Criteria: keyword, date published, source, language
+
 
 }
