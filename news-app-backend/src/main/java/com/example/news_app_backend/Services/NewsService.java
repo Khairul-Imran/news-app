@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.news_app_backend.Config.NewsApiConfig;
+import com.example.news_app_backend.Models.EverythingRequest;
+import com.example.news_app_backend.Models.NewsResponse;
+import com.example.news_app_backend.Models.TopHeadlinesRequest;
 import com.example.news_app_backend.Utils.NewsResponseParser;
 
 @Service
@@ -24,11 +27,23 @@ public class NewsService {
         this.newsDataParser = newsDataParser;
     }
 
-    // getNewsForTopHeadlines
+    public NewsResponse getTopHeadlines(TopHeadlinesRequest request) {
+        
+    }
 
-    // getNewsForEverything
+    public NewsResponse getEverything(EverythingRequest request) {
+        
+    }
 
-    // Criteria: keyword, date published, source, language
+
+    // Helper methods.
+    private NewsResponse fetchNews(String url) {
+
+    }
+
+    private String buildUrl() {
+        
+    }
 
 
 }
