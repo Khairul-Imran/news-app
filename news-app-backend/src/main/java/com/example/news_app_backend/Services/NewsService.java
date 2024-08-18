@@ -36,12 +36,12 @@ public class NewsService {
     }
 
     public NewsResponse getTopHeadlines(TopHeadlinesRequest request) {
-        String url = buildUrl("/v2/top-headlines", request.toQueryParams());
+        String url = buildUrl("/top-headlines", request.toQueryParams());
         return fetchNews(url);
     }
 
     public NewsResponse getEverything(EverythingRequest request) {
-        String url = buildUrl("/vs/everything", request.toQueryParams());
+        String url = buildUrl("/everything", request.toQueryParams());
         return fetchNews(url);
     }
 
