@@ -30,7 +30,7 @@ public class NewsApiConfig {
         return restTemplate;
     }
 
-    public String getApiRul() {
+    public String getApiUrl() {
         return apiUrl;
     }
 
