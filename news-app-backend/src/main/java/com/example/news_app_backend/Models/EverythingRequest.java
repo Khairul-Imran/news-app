@@ -21,6 +21,36 @@ public class EverythingRequest {
     private String sortBy;
     // For now not using page
 
+    public EverythingRequest setQ(String q) {
+        this.q = q;
+        return this;
+    }
+
+    public EverythingRequest setSources (String sources) {
+        this.sources = sources;
+        return this;
+    }
+
+    public EverythingRequest setFrom (String from) {
+        this.from = from;
+        return this;
+    }
+
+    public EverythingRequest setTo (String to) {
+        this.to = to;
+        return this;
+    }
+
+    public EverythingRequest setLanguage (String language) {
+        this.language = language;
+        return this;
+    }
+
+    public EverythingRequest setSortBy (String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+
     public Map<String, String> toQueryParams() {
         Map<String, String> params = new HashMap<>();
         if (q != null) params.put("q", q);
