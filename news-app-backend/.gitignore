@@ -32,8 +32,12 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignore .DS_Store files
+# Ignore macOS system files
 .DS_Store
 
-# Ignore .DS_Store files in subdirectories
-**/.DS_Store
+# Ignore local properties file with real secrets
+application-local.properties
+
+# Ignore any properties files containing "local" or "secret"
+*local*.properties
+*secret*.properties
